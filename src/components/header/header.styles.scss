@@ -1,0 +1,43 @@
+.header {
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+  margin-top: -40px;
+  border-radius: 20px;
+  background-color: #2f3031;
+
+  .title-container {
+    color: #ccac00;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    font-size: 22px;
+    width: 30%;
+    margin-left: -22vw;
+    font-family: "Berkshire Swash", cursive;
+  }
+
+  .logo-container {
+    height: 100%;
+    width: 70px;
+    padding: 25px;
+  }
+
+  .options {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    color: rgb(146, 141, 141);
+
+    .option {
+      padding: 10px 15px;
+      cursor: pointer;
+      font-weight: bold;
+      color: rgb(146, 141, 141);
+    }
+  }
+}
