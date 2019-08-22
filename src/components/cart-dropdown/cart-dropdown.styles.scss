@@ -10,14 +10,14 @@
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.281);
   background-color: white;
   top: 90px;
-  right: 40px;
+  right: 50px;
   z-index: 5;
 
   .cart-items {
     height: 240px;
     display: flex;
     flex-direction: column;
-    overflow-y: hidden;
+    overflow-y: auto;
     width: 110%;
     scrollbar-width: thin;
   }
