@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { Redirect, Route, Switch } from "react-router-dom";
 import { createStructuredSelector } from "reselect";
 import "./App.css";
+import Footer from "./components/footer/footer.component";
 import Header from "./components/header/header.component";
 import { auth, createUserProfileDocument } from "./firebase/firebase.utilis";
 import CheckoutPage from "./pages/checkout/checkout.component";
@@ -56,6 +57,7 @@ class App extends React.Component {
           />
           <Route exact path="/checkout" component={CheckoutPage} />
         </Switch>
+        <Footer />
       </div>
     );
   }
