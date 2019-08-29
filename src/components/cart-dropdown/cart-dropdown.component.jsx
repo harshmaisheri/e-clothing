@@ -1,29 +1,35 @@
 import React from "react";
 import { connect } from "react-redux";
+import { withRouter } from "react-router-dom";
 import { createStructuredSelector } from "reselect";
 import image from "../../assets/images/empty-cart.png";
+import { toggleCartHidden } from "../../redux/cart/cart.actions";
 import { selectCartItems } from "../../redux/cart/cart.selector";
 import CartItem from "../cart-item/cart-item.component";
 import CustomButton from "../custom-button/custom-button.component";
-import "./cart-dropdown.styles.scss";
-import { withRouter } from "react-router-dom";
-import { toggleCartHidden } from "../../redux/cart/cart.actions";
+import {
+  CartDropdownContainer,
+  CartDropDownImage,
+  CartItemsContainer,
+  EmptyContainer,
+  EmptyMessage
+} from "./cart-dropdown.styles";
 
 const CartDropdown = ({ cartItems, history, dispatch }) => {
   return (
-    <div className="cart-dropdown">
-      <div className="cart-items">
+    <CartDropdownContainer>
+      <CartItemsContainer>
         {cartItems.length ? (
           cartItems.map(cartItem => (
             <CartItem key={cartItem.id} item={cartItem} />
           ))
         ) : (
-          <div className="empty-container">
-            <img src={image} alt="empty-cart" />
-            <span className="empty-message">YOUR CART IS EMPTY</span>
-          </div>
+          <EmptyContainer>
+            <CartDropDownImage src={image} alt="empty-cart" />
+            <EmptyMessage>YOUR CART IS EMPTY</EmptyMessage>
+          </EmptyContainer>
         )}
-      </div>
+      </CartItemsContainer>
       <CustomButton
         onClick={() => {
           history.push("/checkout");
@@ -32,7 +38,7 @@ const CartDropdown = ({ cartItems, history, dispatch }) => {
       >
         GO TO CHECKOUT
       </CustomButton>
-    </div>
+    </CartDropdownContainer>
   );
 };
 

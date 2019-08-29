@@ -1,18 +1,23 @@
 import React from "react";
 import { ReactComponent as Logo } from "../../assets/icons/crown.svg";
-import "./footer.styles.scss";
+import {
+  FooterContainer,
+  FooterLogoContainer,
+  FooterTextContainer,
+  FooterTitleContainer
+} from "./footer.styles";
 
 const Footer = () => {
   return (
-    <div className="footer">
-      <div className="logo">
+    <FooterContainer>
+      <FooterLogoContainer>
         <Logo />
-        <span className="title">Crown Clothing Ltd.</span>
-      </div>
-      <div className="text">
+        <FooterTitleContainer>Crown Clothing Ltd.</FooterTitleContainer>
+      </FooterLogoContainer>
+      <FooterTextContainer>
         © 1996-2019, crown-clothing.com, Inc. or its affiliates
-      </div>
-    </div>
+      </FooterTextContainer>
+    </FooterContainer>
   );
 };
 
