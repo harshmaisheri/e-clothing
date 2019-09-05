@@ -1,7 +1,20 @@
 import React from "react";
 import { connect } from "react-redux";
-import { addItem, clearItemFromCart, removeItem } from "../../redux/cart/cart.actions";
-import { CheckoutItemContainer, ChkoutArrow, ChkoutImageContainer, ChkoutImageHolder, ChkoutName, ChkoutPrice, ChkoutQuantity, ChkoutRemoveButton, ChkoutValue } from "./checkout-item.styles";
+import {
+  addItem,
+  clearItemFromCart,
+  removeItem
+} from "../../redux/cart/cart.actions";
+import {
+  CheckoutItemContainer,
+  ChkoutArrow,
+  ChkoutImageContainer,
+  ChkoutImageHolder,
+  ChkoutQuantity,
+  ChkoutRemoveButton,
+  ChkoutText,
+  ChkoutValue
+} from "./checkout-item.styles";
 
 const CheckoutItem = ({ cartItem, clearItem, addItem, removeItem }) => {
   const { name, quantity, price, imageUrl } = cartItem;
@@ -10,14 +23,16 @@ const CheckoutItem = ({ cartItem, clearItem, addItem, removeItem }) => {
       <ChkoutImageContainer>
         <ChkoutImageHolder src={imageUrl} alt="item" />
       </ChkoutImageContainer>
-      <ChkoutName>{name}</ChkoutName>
+      <ChkoutText>{name}</ChkoutText>
       <ChkoutQuantity>
         <ChkoutArrow onClick={() => removeItem(cartItem)}>&#10094;</ChkoutArrow>
         <ChkoutValue>{quantity}</ChkoutValue>
         <ChkoutArrow onClick={() => addItem(cartItem)}>&#10095;</ChkoutArrow>
       </ChkoutQuantity>
-      <ChkoutPrice>${price}</ChkoutPrice>
-      <ChkoutRemoveButton onClick={() => clearItem(cartItem)}>&#10008;</ChkoutRemoveButton>
+      <ChkoutText>${price}</ChkoutText>
+      <ChkoutRemoveButton onClick={() => clearItem(cartItem)}>
+        &#10008;
+      </ChkoutRemoveButton>
     </CheckoutItemContainer>
   );
 };

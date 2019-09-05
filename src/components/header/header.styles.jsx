@@ -18,7 +18,7 @@ export const LogoContainer = styled(Link)`
   padding: 25px;
 `;
 
-export const TitleContainer = styled.div`
+export const TitleContainer = styled(Link)`
   color: #ccac00;
   display: flex;
   justify-content: flex-start;

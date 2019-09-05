@@ -10,7 +10,7 @@ import {
 const Footer = () => {
   return (
     <FooterContainer>
-      <FooterLogoContainer>
+      <FooterLogoContainer to="/">
         <Logo />
         <FooterTitleContainer>Crown Clothing Ltd.</FooterTitleContainer>
       </FooterLogoContainer>

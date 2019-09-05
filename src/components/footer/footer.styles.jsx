@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const FooterContainer = styled.div`
@@ -6,11 +7,11 @@ export const FooterContainer = styled.div`
   justify-content: center;
   display: flex;
   flex-direction: column;
-  margin-top: 100px;
+  margin-top: 25px;
   margin-bottom: -40px;
 `;
 
-export const FooterLogoContainer = styled.div`
+export const FooterLogoContainer = styled(Link)`
   display: flex;
   align-items: center;
   justify-content: center;

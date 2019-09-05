@@ -25,16 +25,12 @@ export const ChkoutImageHolder = styled.img`
   border-radius: 10px;
 `;
 
-export const ChkoutName = styled.span`
+export const ChkoutText = styled.span`
   ${Text}
 `;
 
 export const ChkoutQuantity = styled.div`
   display: flex;
-  ${Text}
-`;
-
-export const ChkoutPrice = styled.span`
   ${Text}
 `;
 

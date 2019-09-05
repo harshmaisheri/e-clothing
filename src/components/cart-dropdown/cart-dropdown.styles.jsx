@@ -23,6 +23,7 @@ export const CartItemsContainer = styled.div`
   overflow-y: auto;
   width: 110%;
   scrollbar-width: thin;
+  margin-bottom: 10px;
 `;
 
 export const EmptyContainer = styled.div`
