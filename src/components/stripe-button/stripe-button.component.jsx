@@ -20,7 +20,6 @@ const StripeButton = ({ price }) => {
       stripeKey={publicableKey}
       amount={priceForStripe}
       panelLabel="Pay Now"
-      locale="in"
       token={onToken}
     />
   );
