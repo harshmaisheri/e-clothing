@@ -13,6 +13,7 @@ import WithSpinner from "../with-spinner/with-spinner.component";
 import {
   ButtonsBarContainer,
   SignInContainer,
+  SignInSubtle,
   SignInTitle
 } from "./sign-in.styles";
 
@@ -38,7 +39,7 @@ const SignIn = ({ googleSignInStart, emailSignInStart, signInLoader }) => {
   return (
     <SignInContainer>
       <SignInTitle>I already have an account</SignInTitle>
-      <span>Sign in with your email & password</span>
+      <SignInSubtle>Sign in with your email & password</SignInSubtle>
 
       <form onSubmit={handleSubmit}>
         <FormInput

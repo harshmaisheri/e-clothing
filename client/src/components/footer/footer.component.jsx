@@ -12,8 +12,8 @@ const Footer = () => {
     <FooterContainer>
       <FooterLogoContainer to="/">
         <Logo />
-        <FooterTitleContainer>Crown Clothing Ltd.</FooterTitleContainer>
       </FooterLogoContainer>
+      <FooterTitleContainer>Crown Clothing Ltd.</FooterTitleContainer>
       <FooterTextContainer>
         © 1996-2019, crown-clothing.com, Inc. or its affiliates
       </FooterTextContainer>

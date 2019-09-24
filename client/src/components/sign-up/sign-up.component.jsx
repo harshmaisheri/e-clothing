@@ -5,7 +5,7 @@ import { signUpStart } from "../../redux/user/user.actions";
 import { signInLoader } from "../../redux/user/user.selector";
 import CustomButton from "../custom-button/custom-button.component";
 import FormInput from "../form-input/form-input.component";
-import { SignUpContainer, SignUpTitle } from "./sign-up.styles";
+import { SignUpContainer, SignUpSpan, SignUpTitle } from "./sign-up.styles";
 
 const SignUp = ({ signUpStart, isLoading }) => {
   const [userCredentials, setCredentials] = useState({
@@ -39,7 +39,7 @@ const SignUp = ({ signUpStart, isLoading }) => {
       ) : (
         <div>
           <SignUpTitle> I do not have an account </SignUpTitle>
-          <span>Sign up with your email & password </span>
+          <SignUpSpan>Sign up with your email & password </SignUpSpan>
 
           <form className="sign-up-form" onSubmit={handleSubmit}>
             <FormInput

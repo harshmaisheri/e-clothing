@@ -12,6 +12,10 @@ export const CheckoutItemContainer = styled.div`
   padding: 15px 0;
   font-size: 20px;
   align-items: center;
+
+  @media screen and (max-width: 800px) {
+    font-size: 18px;
+  }
 `;
 
 export const ChkoutImageContainer = styled.div`
@@ -27,6 +31,10 @@ export const ChkoutImageHolder = styled.img`
 
 export const ChkoutText = styled.span`
   ${Text}
+
+  @media screen and (max-width: 800px) {
+    width: 22%;
+  }
 `;
 
 export const ChkoutQuantity = styled.div`

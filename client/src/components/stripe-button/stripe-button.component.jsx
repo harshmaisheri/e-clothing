@@ -5,7 +5,7 @@ import { withRouter } from "react-router-dom";
 import StripeCheckout from "react-stripe-checkout";
 import { clearCart } from "../../redux/cart/cart.actions";
 
-const StripeButton = ({ price, history, clearCart }) => {
+const StripeCheckoutButton = ({ price, history, clearCart }) => {
   const priceForStripe = price * 100;
   const publicableKey = "pk_test_tob8mHn5Fl1XwPhZElQeO0AP006GNxyIax";
 
@@ -55,5 +55,5 @@ export default withRouter(
   connect(
     null,
     mapDispatchToProps
-  )(StripeButton)
+  )(StripeCheckoutButton)
 );

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const MenuItemContainer = styled.div`
-  /* height: ${({ size }) => (size ? "380px" : "240px")}; */
+  height: ${({ size }) => (size ? "380px" : "240px")};
   height: 380px;
   min-width: 30%;
   overflow: hidden;
@@ -28,6 +28,10 @@ export const MenuItemContainer = styled.div`
   }
   &:last-child {
     margin-left: 7.5px;
+  }
+
+  @media screen and (max-width: 800px) {
+    height: 200px;
   }
 `;
 

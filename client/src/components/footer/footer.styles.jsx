@@ -9,6 +9,11 @@ export const FooterContainer = styled.div`
   flex-direction: column;
   margin-top: 25px;
   margin-bottom: -40px;
+
+  @media screen and (max-width: 800px) {
+    height: 120px;
+    margin-bottom: 0px;
+  }
 `;
 
 export const FooterLogoContainer = styled(Link)`
@@ -17,11 +22,12 @@ export const FooterLogoContainer = styled(Link)`
   justify-content: center;
   flex-direction: column;
   padding: 10px;
-  margin-top: 20px;
+  margin-top: 40px;
 `;
 
 export const FooterTitleContainer = styled.span`
   color: #ccac00;
+  display: flex;
   font-size: 24px;
   margin-top: 10px;
   align-items: center;
@@ -34,4 +40,8 @@ export const FooterTextContainer = styled.span`
   font-size: 14px;
   text-align: center;
   margin: 20px;
+
+  @media screen and (max-width: 800px) {
+    margin-bottom: 0px;
+  }
 `;
